@@ -65,7 +65,7 @@ if (contactForm) {
 }
 
 
-// 4. Emeris Chatbot Widget logic.
+// 4. Emrys Chatbot Widget logic.
 
 const chatToggle = document.getElementById("chat-toggle");
 const chatWidget = document.getElementById("chat-widget");
@@ -81,7 +81,7 @@ function setChatOpen(isOpen) {
 
     chatWidget.hidden = !isOpen;
     chatToggle.setAttribute("aria-expanded", String(isOpen));
-    chatToggle.setAttribute("aria-label", isOpen ? "Close chat with Emeris" : "Open chat with Emeris");
+    chatToggle.setAttribute("aria-label", isOpen ? "Close chat with Emrys" : "Open chat with Emrys");
 
     if (isOpen && chatInput) {
         chatInput.focus();
@@ -114,7 +114,7 @@ function addMessage(message, sender) {
 }
 
 
-// 5. Emeris's Intelligent Knowledge Base.
+// 5. Emrys's Intelligent Knowledge Base.
 
 function getBotResponse(message) {
     const text = message.toLowerCase().trim().replace(/\s+/g, " ");
@@ -129,6 +129,10 @@ function getBotResponse(message) {
 
     if (/\b(price|prices|pricing|cost|costs|quote|quotation|estimate|how much)\b/.test(text)) {
         return "Project costs depend on your specific requirements. Send us a message using the contact form on this page, and our team will discuss a tailored quotation with you.";
+    }
+
+    if (/\b(location|address|where are you|based|remote|in person|in-person|online|onsite)\b/.test(text)) {
+        return "Remote and in-person services are available. Email merlinnettechnology@gmail.com with your location and needs to confirm suitable arrangements.";
     }
 
     if (/\b(web|website|websites|web development|web design)\b/.test(text)) {
@@ -164,12 +168,9 @@ function getBotResponse(message) {
     }
 
     if (/\b(contact|email|reach|write to|talk to|speak to)\b/.test(text)) {
-        return "You can reach us directly at merlinnettechnology@gmail.com or send an enquiry through the contact form on this page.";
+        return "Email merlinnettechnology@gmail.com directly, or use the form to prepare an email. The form opens your email application; you must send the message there.";
     }
 
-    if (/\b(location|address|where are you|based)\b/.test(text)) {
-        return "Please email merlinnettechnology@gmail.com for location details and service arrangements.";
-    }
 
     if (/\b(thank|thanks|thank you)\b/.test(text)) {
         return "You're very welcome! Is there anything else I can assist you with regarding MerlinNet Technology?";
@@ -179,7 +180,7 @@ function getBotResponse(message) {
         return "Goodbye! Thanks for visiting MerlinNet Technology. Reach out anytime at merlinnettechnology@gmail.com.";
     }
 
-    return "I'm Emeris! I can help with information about our web development, software tools, training, IT services, and pricing. For specific inquiries, email merlinnettechnology@gmail.com.";
+    return "I'm Emrys! I can help with information about our web development, software tools, training, IT services, and pricing. For specific inquiries, email merlinnettechnology@gmail.com.";
 }
 
 if (chatForm && chatInput) {
@@ -204,6 +205,7 @@ if (chatForm && chatInput) {
 
 let lastSparkleTime = 0;
 document.addEventListener("mousemove", (e) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const now = Date.now();
     if (now - lastSparkleTime > 45) {
         lastSparkleTime = now;
@@ -222,27 +224,3 @@ document.addEventListener("mousemove", (e) => {
 });
 
 
-// 7. 🌟 Scroll-Reveal Animation Trigger (Spellcasting Effect).
-
-document.addEventListener("DOMContentLoaded", () => {
-    const elementsToReveal = document.querySelectorAll(".service-card, .about-card, .section-heading, .project-placeholder, .contact-grid > div");
-    
-    elementsToReveal.forEach((el) => {
-        el.classList.add("reveal-spell");
-    });
-
-    const observer = new IntersectionObserver((entries, observerInstance) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                observerInstance.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.12
-    });
-
-    document.querySelectorAll(".reveal-spell").forEach((el) => {
-        observer.observe(el);
-    });
-});

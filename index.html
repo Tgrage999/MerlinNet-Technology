@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MerlinNet Technology | Experience the Magic of Technology</title>
-    <meta name="description" content="MerlinNet Technology builds modern websites, software solutions, IT services, digital training, and connected device innovations.">
+    <title>Web Design, IT Support & Computer Training | MerlinNet Technology</title>
+    <meta name="description" content="Web design, IT support, computer training and custom software for the general public. MerlinNet Technology offers remote and in-person services. Enquire by email.">
+    <link rel="canonical" href="https://merlinnet-technology.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MerlinNet Technology">
+    <meta property="og:title" content="Web Design, IT Support &amp; Computer Training | MerlinNet Technology">
+    <meta property="og:description" content="Practical technology services for the general public, available remotely and in person. Explore our services and discuss what you need.">
+    <meta property="og:url" content="https://merlinnet-technology.netlify.app/">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- 🌌 Spell Stream Background Layer -->
     <div class="spell-layer" aria-hidden="true">
@@ -22,32 +29,32 @@
     <header class="header">
         <div class="container navbar">
             <a href="#home" class="logo">
-                <img class="logo-emblem" src="merlinnet%20logo.png" alt="MerlinNet Logo">
+                <img class="logo-emblem" src="/.netlify/images?url=%2Fmerlinnet%20logo.png&amp;w=96&amp;h=96&amp;fit=contain&amp;fm=webp" width="42" height="42" alt="">
                 <span>MerlinNet <strong>Technology</strong></span>
             </a>
 
-            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
                 ☰
             </button>
 
-            <nav class="nav-links" id="nav-links">
+            <nav class="nav-links" id="nav-links" aria-label="Main navigation">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
+                <a href="#about">Our Team</a>
+                <a href="#questions">Questions</a>
                 <a href="#contact" class="nav-button">Get Started</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- ⚡ Hero Section -->
         <section id="home" class="hero">
             <div class="container hero-content">
-                <p class="eyebrow">DIGITAL WIZARDRY & INNOVATION</p>
-                <h1>Experience the <span>Magic</span> of Technology.</h1>
+                <p class="eyebrow">PRACTICAL HELP. CREATIVE SOLUTIONS.</p>
+                <h1>Web design, IT support &amp; <span>computer training.</span></h1>
                 <p class="hero-description">
-                    We craft high-performance websites, smart digital tools, and practical IT solutions that empower businesses and individuals to thrive in the modern digital age.
+                    MerlinNet Technology provides technology services for the general public: websites, custom software, computer training, IT support, digital consulting, and connected-device exploration. Remote and in-person services are available.
                 </p>
                 <div class="hero-buttons">
                     <a href="#services" class="button button-primary">Explore Our Services</a>
@@ -55,7 +62,7 @@
                 </div>
                 <div class="hero-note">
                     <span class="status-dot"></span>
-                    <span>Ready to cast digital spells for your next idea.</span>
+                    <span>Tell us what you need help with. We’ll discuss suitable service arrangements.</span>
                 </div>
             </div>
 
@@ -63,102 +70,121 @@
             <div class="hero-decoration decoration-two"></div>
         </section>
 
+        <!-- ⚡ Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT WE OFFER</p>
+                    <h2>Find the technology <span>service you need</span></h2>
+                    <p>Choose a service below, or ask us if you are unsure where to start.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">01</div>
+                        <h3>Web Design & Development</h3>
+                        <p>Websites that adapt to phones, tablets, and desktop screens. Tell us what your site needs to explain or help visitors do, whether you are starting an online presence or revisiting an existing site.</p>
+                        <a href="#contact">Discuss a project →</a>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">02</div>
+                        <h3>Software Solutions</h3>
+                        <p>Custom applications and digital tools for tasks that existing software does not handle well. Describe the workflow or problem you want to improve so we can discuss the requirements.</p>
+                        <a href="#contact">Discuss a project →</a>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">03</div>
+                        <h3>Computer Training</h3>
+                        <p>Practical computer literacy and digital-skills training. Share what you want to learn and your current experience so we can discuss suitable training arrangements.</p>
+                        <a href="#contact">Inquire about training →</a>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">04</div>
+                        <h3>IT Support & Services</h3>
+                        <p>Help with computer problems, system troubleshooting, hardware questions, and IT planning. Explain the device or system involved and what is going wrong when you enquire.</p>
+                        <a href="#contact">Get technical support →</a>
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">05</div>
+                        <h3>Innovation & IoT</h3>
+                        <p>Exploration of connected devices and smart automation. The Internet of Things (IoT) connects physical devices with digital systems; contact us to discuss the feasibility of your concept.</p>
+                        <a href="#contact">Explore IoT ideas →</a>
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">06</div>
+                        <h3>Digital Consulting</h3>
+                        <p>Guidance on technology choices and digital plans. Share your goals, current tools, and the decisions you need help making to begin a conversation about suitable options.</p>
+                        <a href="#contact">Book a consultation →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- 📜 About Section -->
         <section id="about" class="section">
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">OUR MISSION</p>
-                    <h2>Where Arcane Vision Meets <span>Engineering</span></h2>
-                    <p>Merging technical expertise with creative spellcasting to bring practical ideas to life.</p>
+                    <p class="eyebrow">ABOUT MERLINNET</p>
+                    <h2>The people behind <span>MerlinNet Technology</span></h2>
+                    <p>Practical technology services for everyday needs and new ideas.</p>
                 </div>
 
                 <div class="about-card">
-                    <div class="about-symbol">🔮</div>
+                    <div class="about-symbol" aria-hidden="true">M</div>
                     <div>
-                        <h3>The MerlinNet Philosophy</h3>
+                        <h3>Our founder &amp; team</h3>
                         <p>
-                            At MerlinNet Technology, we believe complex technology should feel like magic—seamless, intuitive, and remarkably powerful. Whether you need an online presence, tailored software, or practical IT consultancy, we handle the intricacies behind the curtain so you can focus on growing your vision.
+                            Our founder and team focus on making technology easier to understand and use. MerlinNet Technology serves the general public with practical support, learning, and development services. Whether you need help with a computer or want to explore a software idea, contact us to discuss your needs and remote or in-person arrangements.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ⚡ Services Section -->
-        <section id="services" class="section services-section">
-            <div class="container">
+        <section id="questions" class="section questions-section" aria-labelledby="questions-heading">
+            <div class="container questions-layout">
                 <div class="section-heading">
-                    <p class="eyebrow">WHAT WE OFFER</p>
-                    <h2>Our Magical <span>Services</span></h2>
-                    <p>Explore our core digital capabilities tailored to bring your projects into reality.</p>
+                    <p class="eyebrow">BEFORE YOU ENQUIRE</p>
+                    <h2 id="questions-heading">Technology services: <span>your questions answered</span></h2>
+                    <p>The essentials about getting help from MerlinNet Technology.</p>
+                    <a href="#contact" class="button button-outline">Discuss your needs</a>
                 </div>
-
-                <div class="services-grid">
-                    <!-- Service 1 -->
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h3>Web Design & Development</h3>
-                        <p>Responsive, fast, and captivating websites built with modern standards to help businesses stand out effortlessly.</p>
-                        <a href="#contact">Discuss a project →</a>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="service-card">
-                        <div class="service-icon">💻</div>
-                        <h3>Software Solutions</h3>
-                        <p>Custom digital tools and software applications designed to streamline workflows and solve daily challenges.</p>
-                        <a href="#contact">Discuss a project →</a>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="service-card">
-                        <div class="service-icon">🎓</div>
-                        <h3>Computer Training</h3>
-                        <p>Hands-on digital education and practical computer literacy skills for individuals and organizations.</p>
-                        <a href="#contact">Inquire about training →</a>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="service-card">
-                        <div class="service-icon">🛠️</div>
-                        <h3>IT Support & Services</h3>
-                        <p>Reliable technical support, system troubleshooting, hardware guidance, and infrastructure consultancy.</p>
-                        <a href="#contact">Get technical support →</a>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="service-card">
-                        <div class="service-icon">📡</div>
-                        <h3>Innovation & IoT</h3>
-                        <p>Exploring connected devices, smart automation concepts, and experimental technology integrations.</p>
-                        <a href="#contact">Explore IoT ideas →</a>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="service-card">
-                        <div class="service-icon">💡</div>
-                        <h3>Digital Consulting</h3>
-                        <p>Strategic technology advice to guide your digital transformation and help you make informed decisions.</p>
-                        <a href="#contact">Book a consultation →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 🔮 Projects Showcase -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">OUR WORK</p>
-                    <h2>Featured <span>Projects</span></h2>
-                    <p>A glimpse into the digital solutions and experimental innovations we craft.</p>
-                </div>
-
-                <div class="project-placeholder">
-                    <div class="project-placeholder-icon">✦</div>
-                    <h3>Magic in the Making</h3>
-                    <p>We are currently putting the finishing touches on several client projects and internal experiments. Check back soon for case studies!</p>
-                    <a href="#contact" class="button button-primary">Start Your Project With Us</a>
+                <div class="answers">
+                    <article class="answer" id="who-we-help">
+                        <h3>Who are MerlinNet’s services for?</h3>
+                        <p>MerlinNet Technology serves the general public. You can enquire about personal technology needs, computer training, websites, or a custom digital project.</p>
+                    </article>
+                    <article class="answer" id="service-availability">
+                        <h3>Are services available remotely or in person?</h3>
+                        <p>Both remote and in-person services are available. Email us with your location and the help you need to confirm suitable arrangements before planning a visit or appointment.</p>
+                    </article>
+                    <article class="answer" id="service-pricing">
+                        <h3>How much do services cost?</h3>
+                        <p>Costs depend on your requirements. Describe the support, training, website, or software you need when you enquire so we can discuss a tailored quotation.</p>
+                    </article>
+                    <article class="answer" id="training-experience">
+                        <h3>Can I ask about basic computer training?</h3>
+                        <p>Yes. MerlinNet offers computer literacy and practical digital-skills training. Tell us your current experience and what you want to learn when asking about training.</p>
+                    </article>
+                    <article class="answer" id="enquiry-details">
+                        <h3>What should I include in an enquiry?</h3>
+                        <p>Include the service you need, the problem or goal, and whether you prefer remote or in-person help. For projects, include any requirements, budget, or target date you already have. Do not send passwords or sensitive account details.</p>
+                    </article>
+                    <article class="answer" id="enquiry-email">
+                        <h3>Does the enquiry form send my message automatically?</h3>
+                        <p>No. It prepares an email in your email application; you must send it there. If no application opens, email <a href="mailto:merlinnettechnology@gmail.com">merlinnettechnology@gmail.com</a> directly.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -168,17 +194,17 @@
             <div class="container contact-grid">
                 <div>
                     <p class="eyebrow">GET IN TOUCH</p>
-                    <h2>Let’s Cast a Digital Spell <span>Together</span></h2>
-                    <p>Have an idea, a project enquiry, or need technical assistance? Fill out the form or reach us directly via email.</p>
+                    <h2>Ask about a service or <span>request a quote</span></h2>
+                    <p>Tell us what you need help with and whether you prefer remote or in-person services. Use the form to prepare an email, or email us directly using the address below.</p>
                     <a href="mailto:merlinnettechnology@gmail.com" class="email-link">merlinnettechnology@gmail.com</a>
                 </div>
 
                 <form class="contact-form" id="contact-form">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="e.g., Arthur Pendelton" required>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" required>
 
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="e.g., arthur@example.com" required>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
 
                     <label for="service">Required Service</label>
                     <select id="service" name="service" required>
@@ -190,11 +216,11 @@
                         <option value="Digital Consulting">Digital Consulting</option>
                     </select>
 
-                    <label for="message">Project Details</label>
+                    <label for="message">How can we help?</label>
                     <textarea id="message" name="message" rows="4" placeholder="Describe what you would like us to create or solve..." required></textarea>
 
-                    <button type="submit" class="button button-primary">Send Enquiry</button>
-                    <p class="form-note">Submitting this form prepares an email in your default client.</p>
+                    <button type="submit" class="button button-primary">Prepare Enquiry Email</button>
+                    <p class="form-note">This opens your email application. Review and send the message there. If it does not open, email us directly.</p>
                 </form>
             </div>
         </section>
@@ -204,7 +230,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-logo">
-                <img src="merlinnet%20logo.png" alt="MerlinNet Logo">
+                <img src="/.netlify/images?url=%2Fmerlinnet%20logo.png&amp;w=96&amp;h=96&amp;fit=contain&amp;fm=webp" width="42" height="42" alt="">
                 <strong>MerlinNet Technology</strong>
             </div>
             <p class="copyright">&copy; <span id="year"></span> MerlinNet Technology. All rights reserved.</p>
@@ -228,7 +254,7 @@
             <div class="bot-message">Hello! I'm  Emrys, your virtual guide. How can I help you today?</div>
         </div>
         <form id="chat-form" class="chat-form">
-            <input type="text" id="chat-input" placeholder="Ask Emrys something..." required>
+            <input type="text" id="chat-input" aria-label="Message to Emrys" placeholder="Ask Emrys something..." required>
             <button type="submit" aria-label="Send message">➤</button>
         </form>
         <div class="chat-disclaimer">Emrys provides automated responses for general enquiries.</div>
