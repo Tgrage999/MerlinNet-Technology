@@ -164,7 +164,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 /* =========================================================
-   2. HEADER & NAVIGATION (With Upright Logo Rotation Fix)
+   2. HEADER & NAVIGATION
 ========================================================= */
 
 .header {
@@ -194,7 +194,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
     animation: float-levitate 6s ease-in-out infinite;
 }
 
-.logo strong {
+.logo strong,
+.footer-logo strong {
     background: linear-gradient(135deg, var(--gold-enchanted), var(--cyan-mana));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -434,21 +435,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
 }
 
-.about-symbol {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    display: grid;
-    place-items: center;
-    border-radius: 14px;
-    background: rgba(124, 58, 237, 0.2);
-    border: 1px solid var(--purple-arcane);
-    color: var(--gold-enchanted);
-    font-size: 1.9rem;
-    animation: float-levitate 4s ease-in-out infinite;
-    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
-}
-
 .about-card h3 { margin-bottom: 10px; color: var(--white); font-size: 1.4rem; }
 .about-card p { margin-bottom: 12px; color: var(--muted); }
 
@@ -491,16 +477,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .service-icon {
-    width: 54px;
-    height: 54px;
-    display: grid;
-    place-items: center;
+    width: max-content;
+    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
     margin-bottom: 22px;
     border-radius: 14px;
     color: var(--cyan-mana);
     background: rgba(0, 240, 255, 0.1);
     border: 1px solid rgba(0, 240, 255, 0.2);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     transition: all 0.35s;
 }
 
@@ -515,29 +501,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .service-card p { min-height: 100px; margin-bottom: 20px; color: var(--muted); font-size: 0.95rem; }
 .service-card a { color: var(--cyan-mana); font-size: 0.93rem; font-weight: 700; transition: color 0.3s; }
 .service-card a:hover { color: var(--gold-enchanted); text-shadow: 0 0 10px var(--gold-enchanted); }
-
-/* Projects Placeholder */
-.project-placeholder {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 60px 30px;
-    border: 1px dashed rgba(0, 240, 255, 0.3);
-    border-radius: var(--radius);
-    background: var(--card-bg);
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
-
-.project-placeholder-icon {
-    margin-bottom: 15px;
-    color: var(--gold-enchanted);
-    font-size: 2.8rem;
-    animation: float-levitate 5s ease-in-out infinite;
-    text-shadow: 0 0 20px var(--gold-enchanted);
-}
-
-.project-placeholder h3 { margin-bottom: 12px; color: var(--white); font-size: 1.55rem; }
-.project-placeholder p { max-width: 500px; margin: 0 auto 25px; color: var(--muted); }
 
 /* =========================================================
    5. CONTACT SECTION & FORM
@@ -599,11 +562,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .footer { padding: 40px 0; background: #050810; border-top: 1px solid var(--border); color: var(--muted); }
 .footer-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
-.footer-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--white); }
-.footer-logo img { width: 38px; height: 38px; object-fit: contain; border-radius: 6px; transform: rotate(270deg); }
+.footer-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--white); font-size: 1.1rem; font-weight: 700; }
 .copyright { font-size: 0.83rem; }
 
-/* Glowing Orb Chatbot Button */
+/* Glowing Orb Chatbot Button (Draggable & Glowing) */
 .chat-toggle {
     position: fixed;
     right: 24px;
@@ -617,16 +579,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
     border-radius: 50%;
     background: radial-gradient(circle at 35% 35%, #9333ea, var(--purple-arcane), #3b0764);
     box-shadow: 0 0 25px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3);
-    cursor: pointer;
+    cursor: grab;
     padding: 0;
+    user-select: none;
+    touch-action: none;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+
+.chat-toggle:active {
+    cursor: grabbing;
 }
 
 .chat-toggle-orb {
     font-size: 1.8rem;
     display: grid;
     place-items: center;
-    filter: drop-shadow(0 0 8px var(--cyan-mana));
+    filter: drop-shadow(0 0 10px var(--cyan-mana)) drop-shadow(0 0 20px var(--purple-arcane));
     animation: float-levitate 4s ease-in-out infinite;
 }
 
@@ -636,6 +604,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     border-color: var(--gold-enchanted);
 }
 
+/* Floating Chat Window Box (Resizable & Draggable Header) */
 .chat-widget {
     position: fixed;
     right: 24px;
@@ -644,6 +613,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     width: min(370px, calc(100vw - 30px));
     height: min(500px, calc(100dvh - 135px));
     min-height: 350px;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -651,6 +621,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     border-radius: 18px;
     background: var(--card-bg);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(124, 58, 237, 0.3);
+    resize: both;
 }
 
 .chat-widget[hidden] { display: none !important; }
@@ -663,6 +634,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
     padding: 18px;
     background: linear-gradient(135deg, var(--purple-arcane), #4c1d95);
     color: var(--white);
+    cursor: grab;
+    user-select: none;
+}
+
+.chat-header:active {
+    cursor: grabbing;
 }
 
 .chat-header p { margin-top: 3px; color: #dbeafe; font-size: 0.8rem; }
@@ -747,7 +724,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
     .spell-layer, .magic-sparkle { display: none !important; }
 }
-/* Service-first page structure and readable answers. */
+
+/* Additional layout adjustments */
 .skip-link {
     position: fixed;
     top: 12px;
@@ -765,7 +743,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .service-card { padding: 34px; }
-.service-icon { font-size: 1rem; letter-spacing: 0.08em; }
 .service-card p { min-height: 0; }
 .questions-section { border-top: 1px solid var(--border); }
 .questions-layout {
